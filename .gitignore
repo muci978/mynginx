@@ -1,3 +1,9 @@
-bin/
-build/
+build/*
+
+!build/
+
+bin/error.log
+
+bin/my_nginx
+
 .vs/
