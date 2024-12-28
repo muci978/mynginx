@@ -58,7 +58,7 @@ void CLog::error_stderr(int err, const std::string &str)
 
     if (err)
     {
-        errStr += "(" + std::to_string(err) + ": " + strerror(err) + ")";
+        errStr += " (" + std::to_string(err) + ": " + strerror(err) + ")";
     }
 
     if (errStr.size() > NGX_MAX_ERROR_STR)
@@ -121,7 +121,7 @@ void CLog::error_core(int level, int err, const std::string &str)
 
     if (err)
     {
-        errStr += "(" + std::to_string(err) + ": " + strerror(err) + ")";
+        errStr += " (" + std::to_string(err) + ": " + strerror(err) + ")";
     }
 
     if (errStr.size() > NGX_MAX_ERROR_STR)

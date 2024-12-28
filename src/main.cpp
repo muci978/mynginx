@@ -33,6 +33,7 @@ int main(int argc, char **argv)
         }
         else if (1 == daemonRet)
         {
+            exit(0);
         }
         else
         {
