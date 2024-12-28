@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.28.3)
+project(my_nginx)
+set(CMAKE_CXX_STANDARD 11)
+set(HOME ${CMAKE_CURRENT_SOURCE_DIR})
+set(EXECUTABLE_OUTPUT_PATH ${HOME}/bin)
+include_directories(${HOME}/include)
+file(GLOB_RECURSE SRC ${HOME}/src/*.cpp)
+add_executable(my_nginx ${SRC})
