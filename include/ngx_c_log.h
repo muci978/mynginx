@@ -19,6 +19,17 @@ public:
     void init();
     void error_stderr(int err, const std::string &str);
     void error_core(int level, int err, const std::string &str);
+
+public:
+    ~CLog()
+    {
+        if (is_open())
+        {
+            ferr.flush();
+            ferr.close();
+        }
+        dft.flush();
+    }
 };
 
 #endif
