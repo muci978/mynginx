@@ -23,4 +23,12 @@
 // 配置文件目录
 #define NGX_CONFIG_FILE_PATH "mynginx.conf"
 
+// 进程类型
+#define NGX_PROC_MASTER 0
+#define NGX_PROC_WORKER 1
+
+// 子进程状态
+#define NGX_SUBPROC_INIT 0
+#define NGX_SUBPROC_EXIT 1
+
 #endif

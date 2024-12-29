@@ -14,6 +14,7 @@ int ngx_daemon()
     switch (fork())
     {
     case -1:
+        ngx_log.error_core(NGX_LOG_EMERG, errno, "ngx_daemon()中fork()失败！");
         return -1;
     case 0:
         break;
